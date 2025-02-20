@@ -105,6 +105,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
               ),
+              Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: ElevatedButton(onPressed: () async {
+                  await showDialog(
+                    context: context,
+                    builder: (alertDialogContext) {
+                      return AlertDialog(
+                        title: Text('Alert'),
+                        content: Text('Button clicked from Android studio!!'),
+                        actions: [
+                          TextButton(
+                            onPressed: () =>
+                                Navigator.pop(alertDialogContext),
+                            child: Text('Ok'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }, child: Text("Created In Android")),
+              )
             ],
           ),
         ),
