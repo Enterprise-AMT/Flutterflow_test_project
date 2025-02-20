@@ -1,2 +1,7 @@
-# Flutterflow_test_project
-This is just created for testing the feasibility of importing customised code from native code
+# Test
+
+A new Flutter project.
+
+## Getting Started
+
+FlutterFlow projects are built to run on the Flutter _stable_ release.
