@@ -75,7 +75,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       builder: (alertDialogContext) {
                         return AlertDialog(
                           title: Text('Alert'),
-                          content: Text('Button clicked from flutterflow!!'),
+                          content: Text('Button clicked from flutterflow!!' + 'This added at Android studio'),
                           actions: [
                             TextButton(
                               onPressed: () =>
@@ -105,6 +105,31 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
               ),
+             Align(
+               alignment: AlignmentDirectional(0.0, 0.0),
+               child: Padding(
+                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                 child: ElevatedButton(onPressed: () async {
+                   await showDialog(
+                   context: context,
+                   builder: (alertDialogContext) {
+                     return AlertDialog(
+                       title: Text('Alert'),
+                       content: Text('Button created in Android Studio!!'),
+                       actions: [
+                         TextButton(
+                           onPressed: () =>
+                               Navigator.pop(alertDialogContext),
+                           child: Text('Ok'),
+                         ),
+                       ],
+                     );
+                   },
+                   );
+                 },
+                 child: Text("Created in Android studio"), ),
+               )
+             )
             ],
           ),
         ),
